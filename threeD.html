@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D — Hazel Ren</title>
+  <meta name="description" content="3D models, renders and turntables by Hazel Ren.">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="inner header-inner">
+      <a class="brand" href="index.html">Hazel Ren</a>
+      <button id="navToggle" class="hamburger" aria-label="Open navigation" aria-controls="overlayNav" aria-expanded="false" type="button">
+        <span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="overlayNav" class="overlay-nav" aria-hidden="true" aria-label="Site navigation">
+    <div class="overlay-inner">
+      <button id="navClose" class="nav-close" aria-label="Close navigation">&times;</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="animation.html">Animation</a></li>
+        <li><a href="characterDesign.html">Character Design</a></li>
+        <li><a href="threeD.html">3D</a></li>
+        <li><a href="others.html">Other Works</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="site-main page" id="top" role="main">
+    <section class="page-header inner">
+      <a class="back" href="index.html">← Back</a>
+      <h1>3D</h1>
+      <p class="lead">Models, renders and short turntables. Click to preview model renders or play video turntables.</p>
+    </section>
+
+    <section class="projects inner">
+      <div class="grid">
+
+        <!-- Static render -->
+        <article class="project-card" data-media="assets/img/3d展示.png" data-type="image">
+          <div class="thumb"><img src="assets/img/3d展示.png" alt="3D render"></div>
+          <div class="meta">
+            <h3>3D Render — Showcase</h3>
+            <p class="short-desc">High-res render used as portfolio highlight.</p>
+          </div>
+        </article>
+
+        <!-- Turntable / short videos (3d视频1..3, 动画文件中有些也是 mp4) -->
+        <article class="project-card" data-media="assets/vid/3d视频1.mp4" data-type="video">
+          <div class="thumb"><video class="thumb-video" muted playsinline preload="none" poster="assets/vid/3d视频1-poster.jpg" data-src="assets/vid/3d视频1.mp4"></video></div>
+          <div class="meta">
+            <h3>Turntable — Model 1</h3>
+            <p class="short-desc">Turntable render showing model details and materials.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-media="assets/vid/3d视频2.mp4" data-type="video">
+          <div class="thumb"><video class="thumb-video" muted playsinline preload="none" poster="assets/vid/3d视频2-poster.jpg" data-src="assets/vid/3d视频2.mp4"></video></div>
+          <div class="meta">
+            <h3>Turntable — Model 2</h3>
+            <p class="short-desc">Alternate lighting and shader tests.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-media="assets/vid/3d视频3.mp4" data-type="video">
+          <div class="thumb"><video class="thumb-video" muted playsinline preload="none" poster="assets/vid/3d视频3-poster.jpg" data-src="assets/vid/3d视频3.mp4"></video></div>
+          <div class="meta">
+            <h3>Turntable — Model 3</h3>
+            <p class="short-desc">Low-poly to high-poly comparison and render pass.</p>
+          </div>
+        </article>
+
+        <!-- If you have additional 3D renders, add similar project-card blocks here -->
+
+      </div>
+    </section>
+
+    <section class="contact inner" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:renhazel89@gmail.com">renhazel89@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner footer-inner"><div>© Hazel Ren</div></div>
+  </footer>
+
+  <div id="mediaModal" class="modal" aria-hidden="true">
+    <div class="modal-inner" role="dialog" aria-modal="true" aria-label="Media preview">
+      <button id="modalClose" class="modal-close" aria-label="Close preview">×</button>
+      <div id="modalContent" class="modal-content"></div>
+      <div class="modal-footer"><a id="modalDownload" class="btn" href="#" target="_blank" rel="noopener">Download / Open original</a></div>
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

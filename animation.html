@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animation — Hazel Ren</title>
+  <meta name="description" content="Hazel Ren — Animation works.">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="inner header-inner">
+      <a class="brand" href="index.html">Hazel Ren</a>
+      <div class="right-controls">
+        <button id="navToggle" class="hamburger" aria-label="Open navigation" aria-controls="overlayNav" aria-expanded="false" type="button">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay Navigation -->
+  <nav id="overlayNav" class="overlay-nav" aria-hidden="true" aria-label="Site navigation">
+    <div class="overlay-inner">
+      <button id="navClose" class="nav-close" aria-label="Close navigation">&times;</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="animation.html">Animation</a></li>
+        <li><a href="characterDesign.html">Character Design</a></li>
+        <li><a href="threeD.html">3D</a></li>
+        <li><a href="others.html">Other Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-contact">
+        <a href="mailto:renhazel89@gmail.com" aria-label="Email">✉️ renhazel89@gmail.com</a>
+        <a href="https://www.instagram.com/hazel_jia1111" target="_blank" rel="noopener">📷 @hazel_jia1111</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="site-main page" id="top" role="main">
+    <section class="page-header inner">
+      <a class="back" href="index.html">← Back</a>
+      <h1>Animation</h1>
+      <p class="lead">Short films, loops and animation experiments. Click a card to preview the media and read a short caption.</p>
+    </section>
+
+    <!-- Projects grid -->
+    <section class="projects inner">
+      <div class="grid">
+
+        <!-- Video projects -->
+        <article class="project-card" data-media="assets/vid/动画1.mp4" data-type="video">
+          <div class="thumb">
+            <video class="thumb-video" muted playsinline preload="none" poster="assets/vid/动画1-poster.jpg" data-src="assets/vid/动画1.mp4"></video>
+          </div>
+          <div class="meta">
+            <h3>Animation Clip — Animation 1</h3>
+            <p class="short-desc">Excerpt from a short piece. Tools: After Effects, compositing.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-media="assets/vid/动画2.mp4" data-type="video">
+          <div class="thumb">
+            <video class="thumb-video" muted playsinline preload="none" poster="assets/vid/动画2-poster.jpg" data-src="assets/vid/动画2.mp4"></video>
+          </div>
+          <div class="meta">
+            <h3>Animation Clip — Animation 2</h3>
+            <p class="short-desc">Loop / motion experiment.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-media="assets/vid/动画3.mp4" data-type="video">
+          <div class="thumb">
+            <video class="thumb-video" muted playsinline preload="none" poster="assets/vid/动画3-poster.jpg" data-src="assets/vid/动画3.mp4"></video>
+          </div>
+          <div class="meta">
+            <h3>Short Film Excerpt — Animation 3</h3>
+            <p class="short-desc">Narrative excerpt. Tools: Toon Boom / Premiere Pro.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-media="assets/vid/动画4.mp4" data-type="video">
+          <div class="thumb">
+            <video class="thumb-video" muted playsinline preload="none" poster="assets/vid/动画4-poster.jpg" data-src="assets/vid/动画4.mp4"></video>
+          </div>
+          <div class="meta">
+            <h3>Micro Clip — Animation 4</h3>
+            <p class="short-desc">Very short test clip.</p>
+          </div>
+        </article>
+
+        <!-- Scene designs -->
+        <article class="project-card" data-media="assets/img/场景设计1.png" data-type="image">
+          <div class="thumb"><img src="assets/img/场景设计1.png" alt="Scene design 1"></div>
+          <div class="meta"><h3>Environment — Scene 1</h3><p class="short-desc">Background concept and color script.</p></div>
+        </article>
+
+        <!-- add other scene and misc thumbnails as in previous versions -->
+        <article class="project-card" data-media="assets/img/场景设计2.png" data-type="image">
+          <div class="thumb"><img src="assets/img/场景设计2.png" alt="Scene design 2"></div>
+          <div class="meta"><h3>Environment — Scene 2</h3><p class="short-desc">Matte painting approach.</p></div>
+        </article>
+
+        <article class="project-card" data-media="assets/img/场景设计3.png" data-type="image">
+          <div class="thumb"><img src="assets/img/场景设计3.png" alt="Scene design 3"></div>
+          <div class="meta"><h3>Environment — Scene 3</h3><p class="short-desc">Color script and lighting test.</p></div>
+        </article>
+
+        <article class="project-card" data-media="assets/img/场景设计4.png" data-type="image">
+          <div class="thumb"><img src="assets/img/场景设计4.png" alt="Scene design 4"></div>
+          <div class="meta"><h3>Environment — Scene 4</h3><p class="short-desc">Background concept and color script.</p></div>
+        </article>
+
+        <article class="project-card" data-media="assets/img/场景设计5.png" data-type="image">
+          <div class="thumb"><img src="assets/img/场景设计5.png" alt="Scene design 5"></div>
+          <div class="meta"><h3>Environment — Scene 5</h3><p class="short-desc">Matte painting approach.</p></div>
+        </article>
+
+        <article class="project-card" data-media="assets/img/场景设计6.png" data-type="image">
+          <div class="thumb"><img src="assets/img/场景设计6.png" alt="Scene design 6"></div>
+          <div class="meta"><h3>Environment — Scene 6</h3><p class="short-desc">Color script and lighting test.</p></div>
+        </article>
+
+          <article class="project-card" data-media="assets/img/场景设计7.png" data-type="image">
+            <div class="thumb"><img src="assets/img/场景设计7.png" alt="Scene design 7"></div>
+            <div class="meta"><h3>Environment — Scene 7</h3><p class="short-desc">Background concept and color script.</p></div>
+          </article>
+
+          <article class="project-card" data-media="assets/img/场景设计8.png" data-type="image">
+            <div class="thumb"><img src="assets/img/场景设计8.png" alt="Scene design 8"></div>
+            <div class="meta"><h3>Environment — Scene 8</h3><p class="short-desc">Matte painting approach.</p></div>
+          </article>
+
+          <article class="project-card" data-media="assets/img/场景设计9.png" data-type="image">
+            <div class="thumb"><img src="assets/img/场景设计9.png" alt="Scene design 9"></div>
+            <div class="meta"><h3>Environment — Scene 9</h3><p class="short-desc">Color script and lighting test.</p></div>
+          </article>
+
+          <article class="project-card" data-media="assets/img/场景设计10.png" data-type="image">
+            <div class="thumb"><img src="assets/img/场景设计10.png" alt="Scene design 10"></div>
+            <div class="meta"><h3>Environment — Scene 10</h3><p class="short-desc">Background concept and color script.</p></div>
+          </article>
+
+          <article class="project-card" data-media="assets/img/场景设计11.png" data-type="image">
+            <div class="thumb"><img src="assets/img/场景设计11.png" alt="Scene design 11"></div>
+            <div class="meta"><h3>Environment — Scene 11</h3><p class="short-desc">Matte painting approach.</p></div>
+          </article>
+
+          <article class="project-card" data-media="assets/img/场景设计12.png" data-type="image">
+            <div class="thumb"><img src="assets/img/场景设计12.png" alt="Scene design 12"></div>
+            <div class="meta"><h3>Environment — Scene 12</h3><p class="short-desc">Color script and lighting test.</p></div>
+          </article>
+
+          <article class="project-card" data-media="assets/img/动画2故事板.png" data-type="image">
+            <div class="thumb"><img src="assets/img/动画2故事板.png" alt="Animation 2 Storyboard"></div>
+            <div class="meta"><h3>Environment — Scene 12</h3><p class="short-desc">Color script and lighting test.</p></div>
+          </article>
+
+
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact inner">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:renhazel89@gmail.com">renhazel89@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!-- Footer & modal -->
+  <footer class="site-footer"><div class="inner footer-inner"><div>© Hazel Ren</div></div></footer>
+
+  <div id="mediaModal" class="modal" aria-hidden="true">
+    <div class="modal-inner" role="dialog" aria-modal="true" aria-label="Media preview">
+      <button id="modalClose" class="modal-close" aria-label="Close preview">×</button>
+      <div id="modalContent" class="modal-content"></div>
+      <div class="modal-footer"><a id="modalDownload" class="btn" href="#" target="_blank" rel="noopener">Download / Open original</a></div>
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

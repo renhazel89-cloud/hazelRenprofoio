@@ -1,5 +1,215 @@
-.eee{
-    color: red; 
-
-
+:root{
+  --bg:#0b0b0b;
+  --fg:#f5f5f5;
+  --muted:#9a9a9a;
+  --accent:#ffffff;
+  --max:1200px;
+  --radius:10px;
+  --gap:28px;
+  --header-h:64px;
 }
+
+/* reset-ish */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,system-ui;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Container / Inner */
+.container, .inner{
+  max-width:var(--max);
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:40px;
+  padding-right:40px;
+}
+@media(max-width:600px){
+  .inner, .container{ padding-left:20px; padding-right:20px; }
+}
+
+/* header */
+.site-header{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:var(--header-h);
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  align-items:center;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.header-inner{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+}
+.brand{
+  color:var(--fg);
+  text-decoration:none;
+  font-weight:600;
+  font-size:1.05rem;
+  letter-spacing:0.4px;
+}
+
+/* links */
+a { color: inherit; text-decoration: none; outline: none; }
+a:focus, button:focus { outline: 2px solid rgba(255,255,255,0.06); outline-offset: 3px; }
+
+/* hamburger */
+.hamburger{ background:none; border:0; width:44px; height:36px; display:flex; flex-direction:column; justify-content:center; cursor:pointer; }
+.bar{ height:2px; background:var(--fg); margin:4px 0; transition: transform .18s ease, opacity .18s ease; }
+
+/* NAV overlay */
+.overlay-nav{ position:fixed; inset:0; background:var(--bg); transform:translateY(-100%); transition:transform .28s cubic-bezier(.2,.9,.2,1); z-index:999; overflow:auto; }
+.overlay-nav.open{ transform:translateY(0); }
+.overlay-inner{ padding:110px 40px; }
+@media(max-width:600px){ .overlay-inner{ padding:80px 20px; } }
+.nav-list{list-style:none;padding:0;margin:0}
+.nav-list li{margin:20px 0}
+.nav-list a{ color:var(--fg); font-size:1.5rem; display:inline-block; }
+.nav-contact{margin-top:40px}
+.nav-contact a{display:block;color:var(--muted);margin:10px 0}
+
+/* PAGE spacing */
+.page{ padding-top: calc(var(--header-h) + 28px); }
+.hero{ padding:48px 0 12px; }
+.hero .lead{ color:var(--muted); font-size:1.05rem; }
+
+/* category grid */
+.grid-cats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:var(--gap);
+  margin:40px 0;
+  padding-left:8px; padding-right:8px;
+}
+.cat-card{
+  display:block;
+  border-radius:var(--radius);
+  overflow:visible;
+  background:#0f0f0f;
+  transition:transform .22s ease, box-shadow .22s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  border:1px solid rgba(255,255,255,0.02);
+}
+.cat-card:hover{ transform: translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.6); }
+.cat-media{height:160px;background-size:cover;background-position:center; display:flex; align-items:center; justify-content:center; background-color:#0b0b0b;}
+.cat-media img{width:100%;height:100%;object-fit:cover;display:block;}
+.cat-body{padding:16px}
+.cat-body h3{margin:0 0 6px 0}
+.cat-desc{margin:0;color:var(--muted);font-size:0.95rem}
+
+/* projects grid */
+.grid{
+  display:grid;
+  gap:var(--gap);
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  margin:28px 0;
+  padding-left:8px; padding-right:8px;
+}
+.project-card{
+  background:#0f0f0f;
+  border-radius:8px;
+  overflow:visible;
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+  border:1px solid rgba(255,255,255,0.03);
+  display:flex;
+  flex-direction:column;
+}
+.project-card:hover{ transform:translateY(-6px); box-shadow:0 14px 34px rgba(0,0,0,0.6); }
+.thumb{ width:100%; display:block; background:#090909; }
+.thumb img, .thumb video{ width:100%; display:block; object-fit:cover; }
+.meta{ padding:14px; flex:0 0 auto; }
+.short-desc{ color:var(--muted); font-size:0.95rem; }
+
+/* give video thumbs a fixed height (aspect ratio) */
+.thumb-video, .thumb img { height: 220px; object-fit:cover; }
+
+/* small screens */
+@media(max-width:600px){
+  .thumb-video, .thumb img { height:160px; }
+  .cat-media{height:120px}
+}
+
+/* modal */
+.modal, #modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); align-items:center; justify-content:center; z-index:2000; }
+.modal[aria-hidden="false"], #modal[style*="display: flex"]{ display:flex; }
+.modal-inner{ max-width:92vw; max-height:92vh; position:relative; padding:12px; background:transparent; }
+.modal-close{position:absolute;top:6px;right:6px;font-size:28px;background:none;border:0;color:var(--fg);cursor:pointer}
+.modal img, .modal video{ max-width:100%; max-height:80vh; display:block; }
+
+/* desktop wider padding */
+@media(min-width:900px){ .inner{ padding-left:60px; padding-right:60px; } }
+
+/* focus styles */
+:focus:not(:focus-visible) { outline: none; }
+
+/* minor helpers */
+.hidden{ display:none !important; }
+/* ---------- Fix: 首页分类卡对齐问题 ---------- */
+/* 作用域只影响首页分类（.categories 下的 .grid-cats） */
+.categories .inner {
+  /* 让首页的 inner 与其它区块对齐，但不给 grid 造成额外内边距 */
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;   /* 这一步关键：去掉 double-padding */
+  padding-right: 0;
+}
+
+/* 让 grid-cats 本身控制左右 gutter，且整体居中 */
+.categories .grid-cats{
+  width: 100%;
+  box-sizing: border-box;
+  margin: 28px auto;               /* 水平居中，保证与标题对齐 */
+  padding-left: 40px;              /* grid 内边距：与页面其他区域一致 */
+  padding-right: 40px;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 更稳的响应式断点 */
+  align-items: start;
+}
+
+/* 小屏幕时收窄内边距，避免左右溢出 */
+@media (max-width: 900px) {
+  .categories .grid-cats { padding-left: 20px; padding-right: 20px; }
+}
+
+/* 保证卡片视觉不被裁切、阴影显示完整且大小统一 */
+.categories .cat-card {
+  margin: 0;
+  overflow: visible;    /* 允许阴影显示 */
+  min-height: 260px;    /* 保持卡片高度一致（可根据喜好调整） */
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-end; /* 文本始终靠底部对齐，视觉平衡 */
+}
+
+/* 确保 cat-media 内的缩略图覆盖并居中（若图片缺失会显示深色占位） */
+.categories .cat-media {
+  height: 170px;
+  display:block;
+  background:#0b0b0b;
+}
+.categories .cat-media img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* 当页面顶端 header 固定时，保证 hero 与 categories 的垂直节奏一致 */
+.hero { padding-bottom: 8px; }
+.categories { padding-top: 28px; padding-bottom: 40px; }
+
+/* End of index category alignment fixes */
